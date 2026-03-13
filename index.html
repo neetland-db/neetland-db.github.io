@@ -29,7 +29,32 @@
   font-size: 110%;
   zoom: 1.25;
   }
+@media (max-width: 768px) {
+  html { zoom: 1; font-size: 100%; }
 
+  .cards-grid { grid-template-columns: 1fr; }
+
+  .card-body { flex-direction: column; }
+
+  .card-photo-col {
+    width: 100%;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .gov-title-block h1 { font-size: 1.8rem; }
+
+  .bond-inner { flex-direction: column; gap: 20px; }
+
+  .bond-names { white-space: normal; }
+
+  .arcana-inner { flex-direction: column; }
+
+  .header-meta { flex-wrap: wrap; gap: 8px; }
+}
   body {
     background: var(--bg);
     color: var(--text);
