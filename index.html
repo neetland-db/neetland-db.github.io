@@ -1157,10 +1157,11 @@ function typeBoot() {
 }
 
 typeBoot();
-if (localStorage.getItem('booted')) {
+const today = new Date().toDateString();
+if (localStorage.getItem('booted') === today) {
   bootScreen.style.display = 'none';
 } else {
-  localStorage.setItem('booted', 'true');
+  localStorage.setItem('booted', today);
   typeBoot();
 }
 
